@@ -215,30 +215,30 @@ export default function Page() {
 
     const phrases = [
       "No",
-      "Are you sure?",
-      "Really sure?",
-      "Think again!",
-      "Last chance!",
-      "Surely not?",
-      "You might regret this!",
-      "Give it another thought!",
-      "Are you absolutely certain?",
-      "This could be a mistake!",
-      "U Have a heart!💕",
-      "Don't be so cold!",
-      "Wouldn't you reconsider?",
-      "Is that your final answer?",
-      "You're breaking my heart ;(",
-      "But... why? 😢",
-      "Please, pretty please? 💖",
-      "I can't take this! 😫",
-      "Are you sure you want to do this to me? 😢",
-      "You're gonna hurt my feelings! 😥",
-      "I need you to reconsider, like now! 😓",
-      "I believe in you, don't disappoint me! 💔",
-      "My heart says yes, what about yours? ❤️",
-      "Don't leave me hanging! 😬",
-      "Plsss? :( You're breaking my heart 💔",
+      "Tehreen... are you sure?",
+      "Really sure about this?",
+      "Think about us again!",
+      "This is your last chance! 💔",
+      "Surely not, my love?",
+      "You might regret this forever!",
+      "Give it another thought, please!",
+      "Are you absolutely certain, Tehreen?",
+      "This could be a big mistake!",
+      "You do have a heart, right? 💕",
+      "Don't be so cold to me! 😢",
+      "Wouldn't you reconsider for us?",
+      "Is that really your final answer?",
+      "You're breaking my heart so badly ;(",
+      "But... why won't you be mine? 😢",
+      "Please, pretty please, Tehreen? 💖",
+      "I can't take this pain! 😫",
+      "Are you sure you want to hurt me like this? 😢",
+      "You're gonna break my heart! 😥",
+      "I need you to say yes, now! 😓",
+      "Tehreen, trust me - say yes! 💔",
+      "My whole heart says yes for you! ❤️",
+      "Don't leave me hanging forever! 😬",
+      "Tehreen... please? You're my everything 💔",
     ];
     
     return phrases[Math.min(noCount, phrases.length - 1)];
@@ -247,7 +247,7 @@ export default function Page() {
   useEffect(() => {
     if (yesPressed && noCount < 4 && !popupShown) {
       Swal.fire({
-        title: "I love you sooo Much!!!❤️, You’ve stolen my heart completely!!! 🥰💖 But itni pyaari ladki aur itni jaldi haan? Thoda aur nakhre karke mujhe tarpaao na! 🥰✨",
+        title: "Tehreen! I love you sooo much!!!❤️ You've stolen my heart completely and you know it! 🥰💖 But you're being so shy... let me make you mine forever! Say yes! 🥰✨",
         showClass: {
           popup: `
             animate__animated
@@ -274,7 +274,7 @@ export default function Page() {
   useEffect(() => {
     if (yesPressed && noCount > 3 && !yespopupShown) {
       Swal.fire({
-        title: "I love you so much!! ❤️ You are my everything, my joy, my forever. Every moment with you is a memory I’ll cherish forever, and my heart beats only for you.</br> Will you be the love of my life forever?",
+        title: "Tehreen, my love! ❤️ You are my everything - my joy, my forever, my reason to smile every single day. Every moment with you is a memory I'll cherish till the end of time, and my heart beats only for you.</br> Will you be the love of my life forever and always? 💕",
         width: 800,
         padding: "2em",
         color: "#716add",
@@ -294,7 +294,7 @@ export default function Page() {
   useEffect(() => {
     if (noCount == 25) {
       Swal.fire({
-        title: "My love for you is endless, like the stars in the sky—shining for you every night, even if you don’t always notice. 🌟 I’ll wait patiently, proving every day that you’re my everything. ❤️ Please press ‘Yes’ and let’s make this a forever story. 🥰✨<br/>'True love never gives up; it grows stronger with time.'",
+        title: "Tehreen... my love for you is endless, like the stars in the sky—shining for you every night. 🌟 You're my everything, and I'll spend my whole life proving how much you mean to me. ❤️ Please stop playing shy and press 'Yes'... let's make this our forever story. 🥰✨<br/>'True love never gives up. It only grows stronger. Just like my love for you.'",
         width: 850,
         padding: "2em",
         color: "#716add",
@@ -327,8 +327,8 @@ export default function Page() {
               src={YesGifs[currentGifIndex]}
               alt="Yes Response"
             />
-            <div className="text-4xl md:text-6xl font-bold my-2" style={{ fontFamily: "Charm, serif", fontWeight: "700", fontStyle: "normal" }}>I Love You !!!</div>
-            <div  className="text-4xl md:text-4xl font-bold my-1" style={{ fontFamily: "Beau Rivage, serif", fontWeight: "500", fontStyle: "normal" }}> You’re the love of my life. </div> 
+            <div className="text-4xl md:text-6xl font-bold my-2" style={{ fontFamily: "Charm, serif", fontWeight: "700", fontStyle: "normal" }}>I Love You, Tehreen !!! 💕</div>
+            <div  className="text-4xl md:text-4xl font-bold my-1" style={{ fontFamily: "Beau Rivage, serif", fontWeight: "500", fontStyle: "normal" }}> You're the love of my life, forever and always. </div>
             <WordMareque />
           </>
         ) : (
@@ -344,8 +344,8 @@ export default function Page() {
               src={Lovegif}
               alt="Love Animation"
             />
-            <h1 className="text-4xl md:text-6xl my-4 text-center">
-              Will you be my Valentine?
+            <h1 className="text-4xl md:text-6xl my-4 text-center" style={{ fontFamily: "Charm, serif", fontWeight: "700" }}>
+              Tehreen, Will You Be My Forever Valentine? 💕
             </h1>
             <div className="flex flex-wrap justify-center gap-2 items-center">
               <button
@@ -393,7 +393,7 @@ const Footer = () => {
   return (
     <a
       className="fixed bottom-2 right-2 backdrop-blur-md opacity-80 hover:opacity-95 border p-1 rounded border-rose-300"
-      href="https://github.com/UjjwalSaini07"
+      href="https://github.com"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -401,7 +401,7 @@ const Footer = () => {
       <span role="img" aria-label="heart">
         ❤️
       </span>
-      {" "}by Ujjwal
+      {" "}for Tehreen
     </a>
   );
 };
