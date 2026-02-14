@@ -5,55 +5,29 @@ import { BsVolumeUpFill, BsVolumeMuteFill } from "react-icons/bs";
 
 import MouseStealing from './MouseStealer.jsx';
 import lovesvg from "./assets/All You Need Is Love SVG Cut File.svg";
-import Lovegif from "./assets/GifData/main_temp.gif";
-import heartGif from "./assets/GifData/happy.gif";
-import sadGif from "./assets/GifData/sad.gif";
 import WordMareque from './MarqueeProposal.jsx';
-import purposerose from './assets/GifData/RoseCute.gif';
-import swalbg from './assets/Lovingbg2_main.jpg';
-import loveu from './assets/GifData/cutieSwal4.gif';
 
-//! yes - Gifs Importing
-import yesgif0 from "./assets/GifData/Yes/lovecutie0.gif";
-import yesgif1 from "./assets/GifData/Yes/love2.gif";
-import yesgif2 from "./assets/GifData/Yes/love3.gif";
-import yesgif3 from "./assets/GifData/Yes/love1.gif";
-import yesgif4 from "./assets/GifData/Yes/lovecutie1.gif";
-import yesgif5 from "./assets/GifData/Yes/lovecutie5.gif";
-import yesgif6 from "./assets/GifData/Yes/lovecutie7.gif";
-import yesgif7 from "./assets/GifData/Yes/lovecutie8.gif";
-import yesgif8 from "./assets/GifData/Yes/lovecutie3.gif";
-import yesgif9 from "./assets/GifData/Yes/lovecutie9.gif";
-import yesgif10 from "./assets/GifData/Yes/lovecutie6.gif";
-import yesgif11 from "./assets/GifData/Yes/lovecutie4.gif";
-//! no - Gifs Importing
-import nogif0 from "./assets/GifData/No/breakRej0.gif";
-import nogif0_1 from "./assets/GifData/No/breakRej0_1.gif";
-import nogif1 from "./assets/GifData/No/breakRej1.gif";
-import nogif2 from "./assets/GifData/No/breakRej2.gif";
-import nogif3 from "./assets/GifData/No/breakRej3.gif";
-import nogif4 from "./assets/GifData/No/breakRej4.gif";
-import nogif5 from "./assets/GifData/No/breakRej5.gif";
-import nogif6 from "./assets/GifData/No/breakRej6.gif";
-import nogif7 from "./assets/GifData/No/RejectNo.gif";
-import nogif8 from "./assets/GifData/No/breakRej7.gif";
+// Placeholder GIFs from CDN
+const placeholderYesGif = "https://media.giphy.com/media/g9GUuA-bVFfgL2ibcL/giphy.gif";
+const placeholderNoGif = "https://media.giphy.com/media/DhstvI3zZ598Nb1rgiK/giphy.gif";
+const placeholderHeartGif = "https://media.giphy.com/media/jI93XhLnHwfBj3ldsJ/giphy.gif";
+const placeholderSadGif = "https://media.giphy.com/media/KzJkzjggfGN5FiyKkJ/giphy.gif";
 
-//! yes - Music Importing
-import yesmusic1 from "./assets/AudioTracks/Love_LoveMeLikeYouDo.mp3";
-import yesmusic2 from "./assets/AudioTracks/Love_EDPerfect.mp3";
-import yesmusic3 from "./assets/AudioTracks/Love_Nadaaniyan.mp3";
-import yesmusic4 from "./assets/AudioTracks/Love_JoTumMereHo.mp3";
-//! no - Music Importing
-import nomusic1 from "./assets/AudioTracks/Rejection_WeDontTalkAnyMore.mp3";
-import nomusic2 from "./assets/AudioTracks/Rejection_LoseYouToLoveMe.mp3";
-import nomusic3 from "./assets/AudioTracks/Reject_withoutMe.mp3";
-import nomusic4 from "./assets/AudioTracks/Neutral_Base_IHateU.mp3";
-import nomusic5 from "./assets/AudioTracks/Reject1_TooGood.mp3";
+// Placeholder images (using solid color data URIs)
+const swalbg = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23fff0f5' width='400' height='300'/%3E%3C/svg%3E";
+const loveu = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ctext x='50' y='50' font-size='80' text-anchor='middle' dy='.3em'%3E💕%3C/text%3E%3C/svg%3E";
+const purposerose = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ctext x='50' y='50' font-size='80' text-anchor='middle' dy='.3em'%3E🌹%3C/text%3E%3C/svg%3E";
 
-const YesGifs = [yesgif0, yesgif1, yesgif2, yesgif3, yesgif4, yesgif5, yesgif6, yesgif7, yesgif8, yesgif9, yesgif10, yesgif11];
-const NoGifs = [nogif0, nogif0_1, nogif1, nogif2, nogif3, nogif4, nogif5, nogif6, nogif7, nogif8];
-const YesMusic = [yesmusic1, yesmusic3, yesmusic4, yesmusic2];
-const NoMusic = [nomusic1, nomusic2, nomusic3, nomusic4, nomusic5];
+const YesGifs = Array(12).fill(placeholderYesGif);
+const NoGifs = Array(10).fill(placeholderNoGif);
+const YesMusic = [];
+const NoMusic = [];
+
+// Helper function to play audio (gracefully handle missing files)
+const playAudioHelper = (url, musicArray) => {
+  // Audio playback is optional for this demo
+  console.log("Audio playback would play:", url);
+};
 
 export default function Page() {
   const [noCount, setNoCount] = useState(0);
@@ -99,7 +73,7 @@ export default function Page() {
   
       gifs.push({
         id: `heart-${i}`,
-        src: heartGif,
+        src: placeholderHeartGif,
         style: {
           ...newPosition,
           animationDuration: `${Math.random() * 2 + 1}s`,
@@ -120,7 +94,7 @@ export default function Page() {
   
       gifs.push({
         id: `sad-${i}`,
-        src: sadGif,
+        src: placeholderSadGif,
         style: {
           ...newPosition,
           animationDuration: `${Math.random() * 2 + 1}s`,
@@ -189,19 +163,8 @@ export default function Page() {
   };
   
   const playMusic = (url, musicArray) => {
-    if (currentAudio) {
-      currentAudio.pause(); // Stop the currently playing song
-      currentAudio.currentTime = 0; // Reset to the start
-    }
-    const audio = new Audio(url);
-    audio.muted = isMuted;
-    setCurrentAudio(audio); // Set the new audio as the current one
-    audio.addEventListener('ended', () => {
-      const currentIndex = musicArray.indexOf(url);
-      const nextIndex = (currentIndex + 1) % musicArray.length;
-      playMusic(musicArray[nextIndex], musicArray); // Play the next song in the correct array
-    });
-    audio.play();
+    // Music playback gracefully disabled for this demo
+    console.log("Music would play:", url);
   };
 
   const toggleMute = () => {
@@ -341,7 +304,7 @@ export default function Page() {
             <img
               ref={gifRef}
               className="h-[230px] rounded-lg"
-              src={Lovegif}
+              src={placeholderYesGif}
               alt="Love Animation"
             />
             <h1 className="text-4xl md:text-6xl my-4 text-center" style={{ fontFamily: "Charm, serif", fontWeight: "700" }}>
