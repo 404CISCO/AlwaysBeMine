@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import { BsVolumeUpFill, BsVolumeMuteFill } from "react-icons/bs";
 
 import MouseStealing from './MouseStealer.jsx';
-import lovesvg from "./assets/All You Need Is Love SVG Cut File.svg";
+import lovesvg from "./assets/All You Need Is Love SVG Cut File.svg";`r`nimport nogif1 from "./assets/GifData/No/RejectNo.gif";
 import WordMareque from './MarqueeProposal.jsx';
 
 // Placeholder GIFs from CDN
@@ -378,3 +378,4 @@ const Footer = () => {
 // ! Pathways-
 // https://app.spline.design/file/48a9d880-40c9-4239-bd97-973aae012ee0
 // https://app.spline.design/file/72e6aee2-57ed-4698-afa7-430f8ed7bd87
+
