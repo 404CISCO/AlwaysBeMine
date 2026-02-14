@@ -5,14 +5,15 @@ import { BsVolumeUpFill, BsVolumeMuteFill } from "react-icons/bs";
 
 import MouseStealing from './MouseStealer.jsx';
 import lovesvg from "./assets/All You Need Is Love SVG Cut File.svg";
+import maingif from "./assets/GifData/main_temp.gif";
 import nogif1 from "./assets/GifData/No/RejectNo.gif";
 import WordMareque from './MarqueeProposal.jsx';
 
-// Placeholder GIFs from CDN
-const placeholderYesGif = "https://media.giphy.com/media/g9GUuA-bVFfgL2ibcL/giphy.gif";
-const placeholderNoGif = "https://media.giphy.com/media/DhstvI3zZ598Nb1rgiK/giphy.gif";
-const placeholderHeartGif = "https://media.giphy.com/media/jI93XhLnHwfBj3ldsJ/giphy.gif";
-const placeholderSadGif = "https://media.giphy.com/media/KzJkzjggfGN5FiyKkJ/giphy.gif";
+// Use bundled GIF assets so production deploys do not depend on third-party hosts
+const placeholderYesGif = maingif;
+const placeholderNoGif = nogif1;
+const placeholderHeartGif = maingif;
+const placeholderSadGif = nogif1;
 
 // Placeholder images (using solid color data URIs)
 const swalbg = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23fff0f5' width='400' height='300'/%3E%3C/svg%3E";
